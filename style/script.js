@@ -1031,7 +1031,7 @@ function createHintText() {
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = canvasSize;
   const context = canvas.getContext('2d');
-  const fontSize = 50;
+  const fontSize = 75;
   const text = 'Chạm Để Xem';
   context.font = `bold ${fontSize}px Arial, sans-serif`;
   context.textAlign = 'center';
@@ -1365,4 +1365,5 @@ window.addEventListener('orientationchange', () => {
   respOverlay.addEventListener('click', (e) => { if (e.target === respOverlay) hideOverlay(respOverlay, respModal); });
 
 })();
+
 
