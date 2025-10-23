@@ -1278,11 +1278,11 @@ window.addEventListener('orientationchange', () => {
   // Hiển thị khi ứng dụng xác nhận "app-ready"
   window.addEventListener('app-ready', showInvitation);
 
-  // Fallback: sau 6s từ load, hiển thị nếu chưa có sự kiện
+  // Fallback: sau 8s từ load, hiển thị nếu chưa có sự kiện
   window.addEventListener('load', ()=>{
     setTimeout(()=>{
       if (overlay.classList.contains('hidden')) showInvitation();
-    }, 6000);
+    }, 8000);
   });
 })();
 
@@ -1352,7 +1352,7 @@ window.addEventListener('orientationchange', () => {
 
   btnLater?.addEventListener('click', () => {
     try { localStorage.setItem('invitationLater', Date.now().toString()); } catch(e) {}
-    showResponse('Rất tiếc🥀', `
+    showResponse('Tiếc nhỉ🥀', `
       <p>Mình rất tiếc bạn không thể tham gia lần này.</p>
       <p>Hy vọng sẽ có dịp gặp lại bạn trong các sự kiện sắp tới.</p>
       <p>Cảm ơn bạn đã dành thời gian đọc lá thư này!</p>
@@ -1365,3 +1365,4 @@ window.addEventListener('orientationchange', () => {
   respOverlay.addEventListener('click', (e) => { if (e.target === respOverlay) hideOverlay(respOverlay, respModal); });
 
 })();
+
