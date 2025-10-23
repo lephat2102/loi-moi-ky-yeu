@@ -1031,25 +1031,25 @@ function createHintText() {
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = canvasSize;
   const context = canvas.getContext('2d');
-  const fontSize = 75;
+  const fontSize = 70;
   const text = 'Chạm Để Xem';
   context.font = `bold ${fontSize}px Arial, sans-serif`;
   context.textAlign = 'center';
   context.textBaseline = 'middle';
-  context.shadowColor = '#ffc800ff';
+  context.shadowColor = '#ffb3de';
   context.shadowBlur = 5;
   context.lineWidth = 2;
-  context.strokeStyle = 'rgba(255, 0, 93, 0.8)';
+  context.strokeStyle = 'rgba(255, 200, 220, 0.8)';
   context.strokeText(text, canvasSize / 2, canvasSize / 2);
-  context.shadowColor = '#9900ffff';
+  context.shadowColor = '#e0b3ff';
   context.shadowBlur = 5;
   context.lineWidth = 2;
-  context.strokeStyle = 'rgba(255, 0, 0, 0.5)';
+  context.strokeStyle = 'rgba(220, 180, 255, 0.5)';
   context.strokeText(text, canvasSize / 2, canvasSize / 2);
   context.shadowColor = 'transparent';
   context.shadowBlur = 0;
-  context.fillStyle = '#ff0808ff';
-  context.fillText(text, canvasSize / 10, canvasSize / 10);
+  context.fillStyle = 'white';
+  context.fillText(text, canvasSize / 2, canvasSize / 2);
   const textTexture = new THREE.CanvasTexture(canvas);
   textTexture.needsUpdate = true;
   const textMaterial = new THREE.MeshBasicMaterial({
@@ -1365,5 +1365,6 @@ window.addEventListener('orientationchange', () => {
   respOverlay.addEventListener('click', (e) => { if (e.target === respOverlay) hideOverlay(respOverlay, respModal); });
 
 })();
+
 
 
